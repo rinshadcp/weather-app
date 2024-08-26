@@ -15,11 +15,12 @@ This is a simple weather application that allows users to view current and histo
 
 ## Getting Started
 
-### Clone the Repository
+0. **Clone the Repository**
 
    ```bash
    git clone https://github.com/your-username/weather-app.git
 
+  
 ### Backend (BE) Setup
 
 1. **Navigate to the backend directory:**
@@ -27,7 +28,7 @@ This is a simple weather application that allows users to view current and histo
    ```bash
    cd weather-app/backend
 
-2. **Run**
+2. **Install**
 
    ```bash
    npm install
@@ -35,9 +36,10 @@ This is a simple weather application that allows users to view current and histo
 3. **Setup .env File**
 
     MONGODB_URL=your_mongodb_url
+   
     API_KEY=your_api_key
 
-4. **Run**
+5. **Run**
 
    ```bash
     npm start
@@ -49,7 +51,7 @@ This is a simple weather application that allows users to view current and histo
    ```bash
    cd weather-app/frontend/weather-app-frontend
 
-2. **Run**
+2. **Install**
 
     ```bash
     npm install
