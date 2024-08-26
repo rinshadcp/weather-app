@@ -4,7 +4,9 @@ import Weather from '../models/Weather.js';
 export const getWeather = async (req, res) => {
   try {
     const { location } = req.query;
-    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.API_KEY}`);
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.API_KEY}`
+    );
     const weatherData = response.data;
 
     const newWeather = new Weather({
@@ -12,7 +14,7 @@ export const getWeather = async (req, res) => {
       temperature: weatherData.main.temp,
       description: weatherData.weather[0].description,
       icon: weatherData.weather[0].icon,
-      date: new Date()
+      date: new Date(),
     });
 
     await newWeather.save();
@@ -25,9 +27,16 @@ export const getWeather = async (req, res) => {
 export const getHistoricalData = async (req, res) => {
   try {
     const { location, from, to } = req.query;
+
+    const fromDate = new Date(from);
+    fromDate.setUTCHours(0, 0, 0, 0);
+
+    const toDate = new Date(to);
+    toDate.setUTCHours(23, 59, 59, 999);
+
     const historicalData = await Weather.find({
       location,
-      date: { $gte: new Date(from), $lte: new Date(to) }
+      date: { $gte: fromDate, $lte: toDate },
     });
 
     res.json(historicalData);
