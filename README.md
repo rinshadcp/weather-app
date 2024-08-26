@@ -22,6 +22,11 @@ This is a simple weather application that allows users to view current and histo
    cd weather-app/backend
 
 2. **Run**
+    ```bash
+    npm install
+
+3. **Run**   
+    ```bash
     npm start
 
 ### Frontend (FE) Setup
@@ -31,4 +36,9 @@ This is a simple weather application that allows users to view current and histo
    cd weather-app/frontend/weather-app-frontend
 
 2. **Run**
+    ```bash
+    npm install
+
+3. **Run**
+    ```bash
     npm run dev
