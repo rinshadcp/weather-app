@@ -17,8 +17,8 @@ This is a simple weather application that allows users to view current and histo
 
 ### Clone the Repository
 
-```bash
-git clone https://github.com/your-username/weather-app.git
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
 
 ### Backend (BE) Setup
 
