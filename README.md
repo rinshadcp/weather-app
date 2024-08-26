@@ -23,31 +23,38 @@ This is a simple weather application that allows users to view current and histo
 ### Backend (BE) Setup
 
 1. **Navigate to the backend directory:**
+
    ```bash
    cd weather-app/backend
 
 2. **Run**
-    ```bash
-    npm install
+
+   ```bash
+   npm install
 
 3. **Setup .env File**
+
     MONGODB_URL=your_mongodb_url
     API_KEY=your_api_key
 
-4. **Run**   
-    ```bash
+4. **Run**
+
+   ```bash
     npm start
 
 ### Frontend (FE) Setup
 
 1. **Navigate to the frontend directory:**
+
    ```bash
    cd weather-app/frontend/weather-app-frontend
 
 2. **Run**
+
     ```bash
     npm install
 
 3. **Run**
+
     ```bash
     npm run dev
